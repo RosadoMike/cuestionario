@@ -1,0 +1,374 @@
+/* Estilo básico del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url(https://i0.wp.com/altc.alt.ac.uk/blog/wp-content/uploads/sites/1112/2022/08/Blog-Cover-Guidlines.png?resize=707%2C409&ssl=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 10px solid #000000;
+
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilo básico de los botones */
+button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 5px solid black;
+    color: #000000;
+}
+
+/* Estilo de los botones cuando se pasa el cursor por encima */
+button:hover {
+    background-color: #3b7706;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilo de los campos de entrada de texto */
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Estilo del botón de ranking */
+#ranking-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 15px 40px;
+    background-color: #309803;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border: 7px solid #0b0b0b;
+}
+
+/* Estilo del botón de ranking cuando se pasa el cursor por encima */
+#ranking-btn:hover {
+    background-color: #b23030;
+}
+
+/* Estilo del contenedor de ranking */
+#ranking-container {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 20px solid #0b0b0b;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título dentro del contenedor de ranking */
+#ranking-container h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo de la tabla de ranking */
+#ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(19, 13, 13); /* Añadir borde negro a la tabla */
+}
+
+/* Estilo de las celdas de la tabla de ranking */
+#ranking-table th, #ranking-table td {
+    border: 1px solid #000000; /* Borde negro a las celdas */
+    padding: 8px;
+}
+
+/* Estilo de las cabeceras de la tabla */
+#ranking-table th {
+    background-color: hsl(133, 89%, 32%);
+    text-align: left;
+}
+
+/* Estilo del botón para cerrar el contenedor de ranking */
+#close-ranking-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    border: 7px solid #0b0b0b;
+}
+
+/* Estilo del botón para cerrar el contenedor de ranking cuando se pasa el cursor por encima */
+#close-ranking-btn:hover {
+    background-color: #640200;
+}
+
+/* Estilo del contenedor de la barra de tiempo */
+#timer-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 100px;
+}
+
+/* Estilo de la barra de tiempo */
+#timer-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 100%;
+    transition: width 1s linear;
+}
+
+/* Clase para cambiar el color de la barra de tiempo a rojo */
+.timer-bar-red {
+    height: 20px;
+    background-color: #f44336 !important;
+    padding: 4px;
+    border-radius: 100px;
+}
+
+/* Clase para mantener el color de la barra de tiempo en verde */
+.timer-bar-green {
+    background-color: #4CAF50 !important;
+    padding: 4px;
+    border-radius: 100px;
+}
+
+/* Estilo de las opciones de respuesta */
+.answer {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f2f2f2;
+    border: 3px solid #a3a3a3;
+    cursor: pointer;
+    margin-right: 35px;
+}
+
+/* Estilo de las opciones de respuesta cuando se pasa el cursor por encima */
+.answer:hover {
+    background-color: #e2e2e2;
+}
+
+/* Clase para las respuestas correctas */
+.correct {
+    background-color: #4CAF50 !important;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    padding-left: 30px; /* Espacio para el icono */
+}
+
+.correct::before {
+    content: '✔'; /* Palomita */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);}
+
+/* Clase para las respuestas incorrectas */
+.incorrect {
+    background-color: #f44336 !important;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    padding-left: 30px; /* Espacio para el icono */
+}
+
+.incorrect::before {
+    content: '✖'; /* Tacha */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilo del contenedor de reglas */
+#rules-container {
+    background-color: #e3dada;
+    padding: 20px;
+    border: 5px solid #0e497a;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+/* Estilo del contenedor de resultados */
+#result-container {
+    background-color: #fff3e0;
+    padding: 20px;
+    border: 1px solid #ffe0b2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo específico para el botón de inicio */
+#start-btn {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 5px solid rgb(0, 0, 0);
+    margin-left: 250px;
+    color: #000000;
+}
+
+#start-btn:hover {
+    background-color: #4ddb01;
+}
+
+/* Estilo específico para el botón de reiniciar */
+#restart-btn {
+    background-color: #ff9800;
+    border-radius: 20px;
+    border: 5px solid black;
+    color: #ffffff;
+}
+
+#restart-btn:hover {
+    background-color: #754000;
+}
+
+/* Estilo específico para botones de finalizar, continuar, y salir */
+#finish-btn {
+    background-color: #f52b2b;
+    border-radius: 20px;
+    border: 5px solid black;
+    color: #efebeb;
+}
+
+#finish-btn:hover {
+    background-color: #590100;
+}
+
+#exit-btn {
+    background-color: #fdfdfd;
+    border-radius: 20px;
+    border: 5px solid black;
+    color: #000000;
+}
+
+#exit-btn:hover {
+    background-color: #ff0707;
+    color: #ffffff;
+}
+
+#continue-btn {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 5px solid black;
+    color: #000000;
+}
+
+#continue-btn:hover {
+    background-color: #4dff00;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo del conteo de preguntas */
+#question-count {
+    font-size: 20px;
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+/* Centrado del mensaje de bienvenida */
+#welcome-message {
+    font-size: 35px; /* Tamaño de fuente del mensaje de bienvenida */
+    color: #000000; /* Color del texto del mensaje de bienvenida */
+    text-align: center; /* Alineación del texto del mensaje de bienvenida */
+    margin-bottom: 20px; /* Margen inferior del mensaje de bienvenida */
+}
+
+/* Centrado del título de registro */
+#registration-title {
+    font-size: 35px; /* Tamaño de fuente del título de registro */
+    color: #333; /* Color del texto del título de registro */
+    text-align: center; /* Alineación del texto del título de registro */
+    margin-bottom: 20px; /* Margen inferior del título de registro */
+}
+
+/* Estilo del contenedor de registro de usuario */
+#registration-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registration-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px; /* Tamaño de fuente de los campos de entrada de registro */
+}
+
+#registration-form button {
+    padding: 10px 20px;
+    background-color: #4b9d53;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border: 5px solid #000000;
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente del botón de registro */
+}
+
+#registration-form button:hover {
+    background-color: #00ff0d;
+}
+
+#delete-users-btn {
+    position: absolute;
+    top: 20px; /* Ajusta según lo necesites */
+    right: 20px; /* Ajusta según lo necesites */
+    padding: 20px 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    border: 5px solid #0b0b0b;
+}
+
+#delete-users-btn:hover {
+    background-color: #d32f2f;
+}

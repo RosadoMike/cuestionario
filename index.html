@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen en Línea</title>
+    <link rel="icon" href="https://img.freepik.com/vector-premium/logotipo-prueba-o-simbolo-icono-cuestionario-encuesta_101884-1076.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="ranking-btn">Top 5</button>
+    <div id="ranking-container" class="hidden">
+        <h2>The Kings</h2>
+        <table id="ranking-table">
+            <thead>
+                <tr>
+                    <th>Posición</th>
+                    <th>Nombre</th>
+                    <th>Puntaje</th>
+                </tr>
+            </thead>
+            <tbody id="ranking-list">
+                <!-- Rankings will be dynamically populated here -->
+            </tbody>
+        </table>
+        <button id="close-ranking-btn">Cerrar</button>
+    </div>
+    <div class="container">
+        <div id="registration-container">
+            <h2 id="registration-title">Regístrate Para Responder</h2>
+            <form id="registration-form">
+                <input type="text" id="username" placeholder="Ingrese su nombre" required>
+                <button type="submit" id="registration-submit">Continuar</button>
+            </form>
+        </div>
+        <div id="start-container" class="hidden">
+            <p id="welcome-message">Hola, ¿Estás listo?</p>
+            <button id="start-btn">Empezar</button>
+        </div>
+        <div id="rules-container" class="hidden">
+            <h2>Reglas de tu Examen en Línea</h2>
+            <ol>
+                <li>Sólo tendrás <span style="color: red;">15 segundos</span> para responder cada pregunta.</li>
+                <li>Una vez que seleccionas tu respuesta, no se puede deshacer.</li>
+                <li>No puedes seleccionar ninguna opción una vez que se acaba el tiempo.</li>
+                <li>No puedes salir del Quiz mientras está corriendo el tiempo.</li>
+                <li>Obtendrás puntos con base en tus respuestas correctas.</li>
+            </ol>
+            <button id="exit-btn">Salir</button>
+            <button id="continue-btn">Continuar</button>
+        </div>
+        <div id="exam-container" class="hidden">
+            <div id="header-container">
+                <h1>Examen en Línea</h1>
+                <div id="question-count">
+                    Pregunta <span id="current-question">1</span> de 10
+                </div>
+                <div id="timer-box">
+                    <span>Tiempo restante: </span>
+                    <span id="timer-count">15</span>
+                </div>
+            </div>
+            <div id="timer">
+                <div id="timer-bar-container">
+                    <div id="timer-bar"></div>
+                </div>
+            </div>
+            <div id="question-container">
+                <p id="question"></p>
+                <ul id="answers">
+                    <!-- Answers will be dynamically populated here -->
+                </ul>
+                <button id="next-btn" class="hidden">Siguiente</button>
+            </div>
+            <div id="result-container" class="hidden">
+                <h2>Resultado del Examen</h2>
+                <p id="result-message"></p>
+                <p id="score"></p>
+                <button id="restart-btn">Reiniciar</button>
+                <button id="finish-btn" class="hidden">Finalizar</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="delete-users-btn">Reset Database</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
